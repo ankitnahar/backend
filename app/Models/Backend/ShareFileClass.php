@@ -14,7 +14,7 @@ class ShareFileClass extends Model {
     public function authShareFile() {
 
         $hostname = "befree.sharefile.com";
-        $username = "clients@befree.com.au";
+        $username = "clients@gmail.com";
         $password = "kj4e 2nco ifju w6le";
         $client_id = "29iQkXAGi9NFx7EJRSE0MMM5SUbE97ua";
         $client_secret = "emHCz1jdqH4cEmcrZcB8xp6S5egcOVJgROH6f50xnOQB0HTq";

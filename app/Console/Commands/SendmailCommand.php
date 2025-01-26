@@ -47,9 +47,9 @@ class SendmailCommand extends Command {
                     \App\Models\Backend\EmailContent::where("id", $value->id)->update(["status" => 2]);
                     $data = array();
                     if ($value->to_email != '' && $value->subject != '') {
-                        if($value->from_email == 'billing@befree.com.au'){
-                            $data['from'] = ['noreply-bdms@befree.com.au' => 'noreply'];
-                            $data['replyTo'] = ['billing@befree.com.au' => 'Billing'];
+                        if($value->from_email == 'billing@gmail.com'){
+                            $data['from'] = ['hk@gmail.com' => 'noreply'];
+                            $data['replyTo'] = ['billing@gmail.com' => 'Billing'];
                         }else{
                         $data['from'] = [$value->from_email => $value->from_name];
                         $data['replyTo'] = $data['from'];
@@ -72,7 +72,7 @@ class SendmailCommand extends Command {
                         $data['to'] = str_replace(",,",",",$data['to']);
                         $data['cc'] = $value->cc_email != '' ? array_unique(explode(',', $value->cc_email)) : array();
                         $data['bcc'] = $value->bcc_email != '' ? array_unique(explode(',', $value->bcc_email)) : array();
-                        /* if($value->from_email=='payroll@befree.com.au' || $value->from_email=='payroll@maxtax.com.au'){
+                        /* if($value->from_email=='payroll@gmail.com' || $value->from_email=='payroll@maxtax.com.au'){
                           if(!empty($data['bcc'])){
                           array_push($data['bcc'],$value->from_email);
                           }else{

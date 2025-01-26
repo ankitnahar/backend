@@ -93,7 +93,7 @@ class TicketReportCommand extends Command {
             $attachment[] = $ticketAttechment;
 
 
-            $emailData['to'] = 'jigneshk@befree.com.au';
+            $emailData['to'] = 'jigneshk@gmail.com';
             $emailData['cc'] = $template->cc;
             $emailData['subject'] = $template->subject;
             $emailData['content'] = html_entity_decode(str_replace('[MONTH]', date("M-Y", strtotime("-1 months")), $template->content));

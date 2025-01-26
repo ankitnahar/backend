@@ -35,7 +35,7 @@ class InvoiceSendController extends Controller {
 
         return createResponse(config('httpResponse.SUCCESS'), 'Invoice List data', ['data' => $dataInvoice]);
         /* } catch (\Exception $e) {
-          $data['to'] = 'bdmsdeveloper@befree.com.au';
+          $data['to'] = 'hkdvelope@gmail.com';
           $data['subject'] = 'Invoice Auto Invoice Send cron not run dated: ' . date('d-m-Y H:i:s');
           $data['content'] = '<h3 style="font-family:sans-serif;">Hello Team,</h3><p style="font-family:sans-serif;">Update remark previous day cron does not execute due to below mentioned exception.</p><p style="font-family:sans-serif;">' . $e->getMessage() . '</p>';
           storeMail('', $data);

@@ -795,7 +795,7 @@ class GoogleDriveFileController extends Controller {
             $fi = file_put_contents($filePath, $rawData);
 
             $data['to'] = $request->input('xero_email_id');
-            $data['from'] = 'noreply-bdms@befree.com.au';
+            $data['from'] = 'hk@gmail.com';
             $data['from_name'] = 'Noreply';
             $data['subject'] = $fileName;
             $data['content'] = 'test';

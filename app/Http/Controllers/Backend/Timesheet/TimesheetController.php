@@ -7,14 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\Timesheet;
 
 class TimesheetController extends Controller {
-    /*
-     * Created by: Jayesh Shingrakhiya
-     * Created on: Sept 20, 2018
-     * Purpose: Get Time sheet detail
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
-
+   
     public function index(Request $request) {
 //try {
 //validate request parameters
@@ -195,13 +188,6 @@ class TimesheetController extends Controller {
 //        }
     }
 
-    /*
-     * Created by: Jayesh Shingrakhiya
-     * Created on: Sept 21, 2018
-     * Purpose: Store time sheet details
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function store(Request $request) {
 //try {
@@ -254,14 +240,7 @@ class TimesheetController extends Controller {
             $hr_detail = $hr_detail->first();
             $subactivityCode = config('constant.subactivityCode');
 
-//            if ($request->has('no_of_transaction') && $request->get('no_of_transaction') != '' && in_array($code, $subactivityCode['numberOfTransation']))
-//                $numberOfValue = $request->get('no_of_transaction');
-//            else if ($request->has('no_of_payslip') && $request->get('no_of_payslip') != '' && in_array($code, $subactivityCode['numberOfPayslip']))
-//                $numberOfValue = $request->get('no_of_payslip');
-//            else if ($request->has('no_of_employee') && $request->get('no_of_employee') != '' && in_array($code, $subactivityCode['numberOfEmployee']))
-//                $numberOfValue = $request->get('no_of_employee');
-//            else
-//                $numberOfValue = 0;
+
 
             $numberOfValue = 0;
             if ($request->has('no_of_value') && $request->get('no_of_value') != '')
@@ -284,13 +263,6 @@ class TimesheetController extends Controller {
                 $reviewerId = $worksheetDetail->worksheet_reviewer;
             else
                 $reviewerId = 0;
-
-//            if ($request->has('chargeable_type') && $request->get('chargeable_type') != '')
-//                $payrollOptionId = $request->get('chargeable_type');
-//            else if ($request->has('superfund_type') && $request->get('superfund_type') != '')
-//                $payrollOptionId = $request->get('superfund_type');
-//            else
-//                $payrollOptionId = 0;
 
             $payrollOptionId = 0;
             if ($request->has('payroll_option_id') && $request->get('payroll_option_id') != '')
@@ -385,13 +357,6 @@ class TimesheetController extends Controller {
 //        }
     }
 
-    /*
-     * Created by: Jayesh Shingrakhiya
-     * Created on: Sept 20, 2018
-     * Purpose: Get particular time sheet details
-     * @param  int  $id   //timesheet id
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function show($id) {
         try {
@@ -408,14 +373,6 @@ class TimesheetController extends Controller {
         }
     }
 
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: update time sheet details
-     * @param  Illuminate\Http\Request  $request
-     * @param  int                      $id   // timesheet id
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function update(Request $request, $id) {
         //try {
@@ -465,26 +422,9 @@ class TimesheetController extends Controller {
                 $updateData['bank_cc_account_no'] = $explodeBank[1];
             }
 
-
-//            if ($request->has('no_of_transaction') && $request->get('no_of_transaction') != '' && in_array($code, $subactivityCode['numberOfTransation']))
-//                $numberOfValue = $request->get('no_of_transaction');
-//            else if ($request->has('no_of_payslip') && $request->get('no_of_payslip') != '' && in_array($code, $subactivityCode['numberOfPayslip']))
-//                $numberOfValue = $request->get('no_of_payslip');
-//            else if ($request->has('no_of_employee') && $request->get('no_of_employee') != '' && in_array($code, $subactivityCode['numberOfEmployee']))
-//                $numberOfValue = $request->get('no_of_employee');
-//            else
-//                $numberOfValue = 0;
-
             $numberOfValue = 0;
             if ($request->has('no_of_value') && $request->get('no_of_value') != '')
                 $numberOfValue = $request->get('no_of_value');
-
-//            if ($request->has('number') && $request->get('number') != '' && in_array($code, $subactivityCode['number']))
-//                $extraValue = $request->get('number');
-//            else if ($request->has('no_of_year') && $request->get('no_of_year') != '' && in_array($code, $subactivityCode['numberOfyear']))
-//                $extraValue = $request->get('no_of_year');
-//            else
-//                $extraValue = 0;
 
             $extraValue = 0;
             if ($request->has('extra_value') && $request->get('extra_value') != '') {
@@ -528,15 +468,6 @@ class TimesheetController extends Controller {
           } */
     }
 
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: update time sheet details
-     * @param  Illuminate\Http\Request  $request
-     * @param  int                      $id   // timesheet id
-     * @return Illuminate\Http\JsonResponse
-     */
-
     public function destroy(Request $request, $id) {
         try {
             $timesheetDetail = Timesheet::find($id);
@@ -552,14 +483,6 @@ class TimesheetController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not delete timesheet.', ['error' => 'Could not delete timesheet.']);
         }
     }
-
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: fetch worksheet listing
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function worksheet(Request $request) {
         try {
@@ -591,14 +514,6 @@ class TimesheetController extends Controller {
         }
     }
 
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: fetch worksheet listing
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
-
     public function AssingEntity(Request $request) {
         try {
             $user_id = app('auth')->guard()->id();
@@ -613,14 +528,6 @@ class TimesheetController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not list out worksheet client.', ['error' => 'Could not list out worksheet client.']);
         }
     }
-
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: fetch worksheet master activity listing based on entity
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function entityMasterActivity(Request $request) {
         try {
@@ -642,14 +549,6 @@ class TimesheetController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not list out worksheet.', ['error' => 'Could not list out worksheet.']);
         }
     }
-
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 20, 2018 
-     * Purpose: fetch worksheet master activity listing based on entity
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function entityBankInfo(Request $request) {
         try {
@@ -674,14 +573,6 @@ class TimesheetController extends Controller {
         }
     }
 
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 22, 2018 
-     * Purpose: fetch subactivity code payroll option
-     * @param  $id 
-     * @return Illuminate\Http\JsonResponse
-     */
-
     public function payrollOption($code) {
         try {
             $payrollOption = \App\Models\Backend\TimesheetPayrollOption::where('subcategory_code', $code)->get()->toArray();
@@ -695,14 +586,6 @@ class TimesheetController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not list out worksheet payroll option.', ['error' => 'Could not list out worksheet.']);
         }
     }
-
-    /*
-     * Created by: Jayesh Shigrakhiya
-     * Created on: Sept 25, 2018 
-     * Purpose: fetch time sheet summary listing
-     * @param  $id 
-     * @return Illuminate\Http\JsonResponse
-     */
 
     public function timesheetSummary(Request $request) {
         try {
@@ -789,11 +672,6 @@ class TimesheetController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
-     * Created on: Jan 30, 2019
-     * To get worksheet details
-     */
-
     public function getTimesheetDetailInfo(Request $request) {
         try {
             $validator = app('validator')->make($request->all(), [
@@ -843,249 +721,7 @@ class TimesheetController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not fetch timesheet period', ['error' => 'Could not fetch timesheet period']);
         }
     }
-
-    public function getUserlist(Request $request) {
-        try {
-            $validator = app('validator')->make($request->all(), [
-                'access_token' => 'required',
-                'user_type' => 'required',
-//                'username' => 'required',
-//                'bdms_user_id' => 'required'
-                    ], []);
-
-            if ($validator->fails()) // Return error message if validation fails
-                echo json_encode(array('error' => $validator->errors()->first()));
-
-            if ($request->get('access_token') != '0vBBoaNmkg5Uq88QGWJmvpakDyz3oskUZJKY0Fr04crA3W1RlNdib4tl7x4vrecUEKZVspzqIlfGJ9u3klLLHRM7NdmTKoJaAHLBdqdJPUHZ4sU0Mb1lmkqhyAyQc2IkovxLRecySsFIiHfLP3gRmglyAUw9dxVFQO5Fu9IeUOCqEPmaHr276Ve8FJSx64PfNzcQ4gnhieyHzQBOkt6OwY2pojjccHuHs9tWNuhCBPBkkZHDYEJEpdgz0xCGlWZ') {
-                $response = array('result' => 'failed', 'message' => 'invalid access token');
-                echo json_encode($response);
-                exit;
-            }
-
-            /* To check IP address is accessable or not. If not accessable then should be return result with invalid IP address */
-            $isAccess = \App\Models\Backend\IpAddress::whereRaw("from_ip = INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "') OR (from_ip <= INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "') AND to_ip >= INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "'))")->count();
-            if ($isAccess == 0) {
-                $response = array('result' => 'failed', 'message' => 'invalid IP address');
-                echo json_encode($response);
-                exit;
-            }
-
-            $userDetail = \App\Models\User::where('user_timesheet_fillup_flag', 0);
-            if ($request->get('bdms_user_id') != '') {
-                $userDetail = $userDetail->where('id', $request->get('bdms_user_id'));
-            } else {
-                $userDetail = $userDetail->whereRaw("(user_fname LIKE '%" . $request->get('username') . "%' OR user_lname LIKE '%" . $request->get('username') . "%')");
-            }
-
-            if ($request->get('user_type') != '') {
-                $userDetail = $userDetail->where('is_active', 1);
-            } else {
-                $userDetail = $userDetail->where('is_active', 0);
-            }
-
-            $userDetail = $userDetail->get();
-            $response = array();
-            if (!empty($userDetail)) {
-                $isActive = 'No';
-                foreach ($userDetail as $key => $value) {
-                    if ($value->is_active == 1)
-                        $isActive = 'Yes';
-
-                    $response[] = array('username' => $value->user_fname . " " . $value->user_lname, 'email' => $value->email, 'user_id' => $value->id, 'is_active' => $isActive);
-                }
-                echo json_encode($response);
-                exit;
-            }
-        } catch (Exception $ex) {
-            app('log')->error("Getuser list fetch failed : " . $e->getMessage());
-            echo createResponse(config('httpResponse.SERVER_ERROR'), 'Could not fetch user details', ['error' => 'Could not fetch user details']);
-        }
-    }
-
-    public function getTimesheetFromPortal(Request $request) {
-        //try {
-        if ($request->get('access_token') != "" && $request->get('timesheet_data') != "" && $request->get('type') != '') {
-            try {
-                /* To check access token is valid or not. If not valid then should be return result with invalid access token */
-                if ($request->get('access_token') != '0vBBoaNmkg5Uq88QGWJmvpakDyz3oskUZJKY0Fr04crA3W1RlNdib4tl7x4vrecUEKZVspzqIlfGJ9u3klLLHRM7NdmTKoJaAHLBdqdJPUHZ4sU0Mb1lmkqhyAyQc2IkovxLRecySsFIiHfLP3gRmglyAUw9dxVFQO5Fu9IeUOCqEPmaHr276Ve8FJSx64PfNzcQ4gnhieyHzQBOkt6OwY2pojjccHuHs9tWNuhCBPBkkZHDYEJEpdgz0xCGlWZ') {
-                    $response = array('result' => 'failed', 'message' => 'invalid access token');
-                    echo json_encode($response);
-                    exit;
-                }
-
-                /* To check IP address is accessable or not. If not accessable then should be return result with invalid IP address */
-                /* $isAccess = \App\Models\Backend\IpAddress::whereRaw("from_ip = INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "') OR (from_ip <= INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "') AND to_ip >= INET_ATON('" . $_SERVER['REMOTE_ADDR'] . "'))")->count();
-                  if ($isAccess == 0) {
-                  $response = array('result' => 'failed', 'message' => 'invalid IP address');
-                  echo json_encode($response);
-                  exit;
-                  } */
-                $worksheet_id = 259615;
-                $subactivity_code = 2308;
-                if ($request->get('type') == 'SR_PORTAL') {
-                    $entity_id = 386;
-                } else if ($request->get('type') == 'UK_PORTAL') {
-                    $entity_id = 4329;
-                } else if ($request->get('type') == 'AUDIT_PORTAL') {
-                    $entity_id = 386;
-                }
-
-                $concatId = $response = array();
-                $timesheetData = $request->input('timesheet_data');
-
-                $timesheetremove = $concatId = $response = $userRes = array();
-                foreach ($timesheetData as $key => $value) {
-                    $hrDetail = app('db')->table('hr_detail')->select('id', 'punch_in')->where('date', $value['date'])->where('user_id', $value['bdms_user_id']);
-                    if ($hrDetail->count() == 0) {
-                        \App\Http\Controllers\Backend\Hr\HRController::addHrDetail($value['date']);
-                    }
-                    $hrDetail = $hrDetail->get()->toArray();
-                    if ($hrDetail[0]->punch_in == NULL) {
-                        continue;
-                    }
-                    $timesheetInsertData = $updateData = $timesheetPortalData = array();
-
-                    $user_id = $value['bdms_user_id'];
-                    $notes = trim(stripcslashes($value['comment']));
-                    $units = trim($value['units']);
-                    $date = trim($value['date']);
-                    $timesheetPortalData['prev_bdms_timesheet_id'] = $value['prev_bdms_timesheet_id'];
-                    $timesheetPortalData['hr_detail_id'] = $hrDetail[0]->id;
-                    $timesheetPortalData['worksheet_id'] = $worksheet_id;
-                    $timesheetPortalData['entity_id'] = $entity_id;
-                    $timesheetPortalData['service_id'] = 0;
-                    $timesheetPortalData['subactivity_code'] = $subactivity_code;
-                    $timesheetPortalData['user_id'] = $user_id;
-                    $timesheetPortalData['date'] = $date;
-                    $timesheetPortalData['units'] = $units;
-                    $timesheetPortalData['notes'] = $notes;
-                    $timesheetPortalData['timesheet_data_sr'] = json_encode($timesheetData);
-                    $timesheetPortalData['timesheet_save_units_id'] = isset($value['timesheet_save_units_id']) ? $value['timesheet_save_units_id'] : 'Field not come through SR';
-                    $timesheetPortalData['created_on'] = date('Y-m-d H:i:s');
-                    $timesheetPortalData['created_by'] = 1;
-
-                    $portaData = app('db')->table('timesheet_portal')->insertGetId($timesheetPortalData);
-                    /* $lastMonthDate = date('Y-m-d', strtotime("-1 month"));
-                      if ($value['date'] < $lastMonthDate) {
-                      continue;
-                      } */
-                    $item_count = isset($value['item_count']) ? $value['item_count'] : 0;
-                    if (isset($value['bdms_user_id']) && trim($value['bdms_user_id']) != "" && isset($value['user_id']) && trim($value['user_id']) != "" && isset($value['date']) && trim($value['date']) != "" && isset($value['units'])) {
-                        /*  $timesheetSyncData = array();
-                          $timesheetSyncData['bdms_user_id'] = $value['bdms_user_id'];
-                          $timesheetSyncData['sr_user_id'] = $value['user_id'];
-                          $timesheetSyncData['timesheet_date'] = $value['date'];
-                          $timesheetSyncData['timesheet_sync'] = 1;
-                          $timesheetSyncData['type'] = 1;
-                          $timesheetSyncData['request_txt'] = json_encode($value);
-                          $timesheetSyncData['created_on'] = date('Y-m-d H:i:s'); */
-                        // $hrDetail = app('db')->table('hr_detail')->select('id')->where('date', $value['date'])->where('user_id', $value['bdms_user_id'])->get()->toArray();
-
-                        /* $timesheetDetail = app('db')->table('timesheet')->select('id')
-                          ->where('date', $value['date'])
-                          ->where('user_id', $value['bdms_user_id']); */
-
-                        // $timesheetInsertData = $updateData = $timesheetPortalData = array();
-                        // $worksheet_master_id = 49111;
-
-                        /* $user_id = $value['bdms_user_id'];
-                          $notes = trim($value['comment']);
-                          $units = trim($value['units']);
-                          $date = trim($value['date']);
-
-                          $timesheetPortalData['prev_bdms_timesheet_id'] = $value['prev_bdms_timesheet_id'];
-                          $timesheetPortalData['hr_detail_id'] = $hrDetail[0]->id;
-                          $timesheetPortalData['worksheet_id'] = $worksheet_id;
-                          $timesheetPortalData['entity_id'] = $entity_id;
-                          $timesheetPortalData['service_id'] = 0;
-                          $timesheetPortalData['subactivity_code'] = $subactivity_code;
-                          $timesheetPortalData['user_id'] = $user_id;
-                          $timesheetPortalData['date'] = $date;
-                          $timesheetPortalData['units'] = $units;
-                          $timesheetPortalData['notes'] = $notes;
-                          $timesheetPortalData['timesheet_save_units_id'] = isset($value['timesheet_save_units_id']) ? $value['timesheet_save_units_id'] : 'Field not come through SR';
-                          $timesheetPortalData['created_on'] = date('Y-m-d H:i:s');
-                          $timesheetPortalData['created_by'] = 1;
-
-                          $portaData = app('db')->table('timesheet_portal')->insertGetId($timesheetPortalData); */
-                        $timesheet_id = '';
-                        $timesheetInsertData['hr_detail_id'] = $hrDetail[0]->id;
-                        $timesheetInsertData['worksheet_id'] = $worksheet_id;
-                        $timesheetInsertData['entity_id'] = $entity_id;
-                        $timesheetInsertData['service_id'] = 0;
-                        $timesheetInsertData['subactivity_code'] = $subactivity_code;
-                        $timesheetInsertData['user_id'] = $user_id;
-                        $timesheetInsertData['date'] = $date;
-                        $timesheetInsertData['units'] = $units;
-                        $timesheetInsertData['notes'] = $notes;
-                        $timesheetInsertData['is_reviewed'] = 1;
-                        $timesheetInsertData['created_on'] = date('Y-m-d H:i:s');
-                        $timesheetInsertData['created_by'] = 1;
-                        if (isset($hrDetail[0]->id) && $hrDetail[0]->id > 0 && ($value['prev_bdms_timesheet_id'] == 0 || $value['prev_bdms_timesheet_id'] == '')) {
-
-                            $timesheet_id = app('db')->table('timesheet')->insertGetId($timesheetInsertData);
-                            $concatId[$value['bdms_user_id']][$value['date']][] = $timesheet_id;
-                        } else if (isset($hrDetail[0]->id) && $hrDetail[0]->id > 0 && $value['prev_bdms_timesheet_id'] != 0 && $value['prev_bdms_timesheet_id'] != '') {
-                            $timesheet_id = $value['prev_bdms_timesheet_id'];
-                            $getTimehseteDetail = Timesheet::where("id", $timesheet_id);
-                            if ($getTimehseteDetail->count() > 0) {
-                                $getTimehseteDetail = $getTimehseteDetail->first();
-                                if ($getTimehseteDetail->user_id == $user_id) {
-                                    app('db')->table('timesheet')->where("id", $timesheet_id)->update(["units" => $units, "notes" => $notes, "modified_on" => date('Y-m-d H:i:s'), "modified_by" => 1]);
-                                } else {
-                                    $timesheet_id = app('db')->table('timesheet')->insertGetId($timesheetInsertData);
-                                    $concatId[$value['bdms_user_id']][$value['date']][] = $timesheet_id;
-                                }
-                            } else {
-
-                                $timesheet_id = app('db')->table('timesheet')->insertGetId($timesheetInsertData);
-                                $concatId[$value['bdms_user_id']][$value['date']][] = $timesheet_id;
-                            }
-                        }
-                        $curretDate = date('Y-m-d');
-                        if ($date != $curretDate) {
-                            $day = date('d');
-                            if ($day > 27) {
-                                $startDate = date('Y-m-26');
-                                $endDate = date('Y-m-25', strtotime("+1 month", strtotime($curretDate)));
-                            } else {
-                                $startDate = date('Y-m-26', strtotime("-1 month", strtotime($curretDate)));
-                                $endDate = date('Y-m-28');
-                            }
-                            if ($date >= $startDate && $date <= $endDate) {
-                                \App\Http\Controllers\Backend\Hr\AttendanceController::updateRemarkTimesheetAdd($date, $user_id);
-                            }
-                        }
-                    }
-                    \App\Models\Backend\PendingTimesheet::where("date", $date)->where("user_id", $user_id)->delete();
-                    //  app('db')->table('timesheet_sync_issue')->insert($timesheetSyncData);
-                    $timesheetUnit = isset($value['timesheet_save_units_id']) ? $value['timesheet_save_units_id'] : 0;
-                    $response[$user_id . "_" . $date] = array('user_id' => $value['user_id'], 'timesheet_id' => $timesheet_id, 'date' => $date, 'bdms_user_id' => $user_id, 'item_count' => $item_count, 'timesheet_save_units_id' => $timesheetUnit);
-                    $userRes[$user_id . "_" . $date] = array('user_id' => $value['user_id'], 'timesheet_id' => $timesheet_id, 'date' => $date, 'bdms_user_id' => $user_id, 'item_count' => $item_count, 'timesheet_save_units_id' => $timesheetUnit);
-
-                    $resData = json_encode($userRes);
-                    app('db')->table('timesheet_portal')->where("id", $portaData)->update(['responce_id' => $resData]);
-                }
-                echo json_encode($userRes);
-                exit;
-            } catch (\Exception $e) {
-                app('log')->error("Timesheet added failed : " . $e->getMessage());
-                $data['to'] = 'pankaj.k@befree.com.au';
-                $data['subject'] = 'timesheet cron issue';
-                $data['from_email'] = 'no-reply@befree.com.au';
-                $data['content'] = $e->getMessage();
-                //storeMail('', $data);
-                //return createResponse(config('httpResponse.SERVER_ERROR'), "Error while listing Timesheet", ['error' => 'Server error.']);
-            }
-        } else {
-            $response = array('result' => 'failed', 'message' => 'invalid request');
-            echo json_encode($response);
-            exit;
-        }
-        /* } catch (\Exception $e) {
-          app('log')->error("Timesheet added failed : " . $e->getMessage());
-          return createResponse(config('httpResponse.SERVER_ERROR'), "Error while listing Timesheet", ['error' => 'Server error.']);
-          } */
-    }
+   
+  
 
 }

@@ -254,7 +254,7 @@ class UserController extends Controller {
             $content = str_replace("[USERNAME]", $user->user_login_name, $content);
             $content = str_replace("[PASSWORD]", $password, $content);
             $data['content'] = $content;
-            $data['from'] = "noreply-bdms@befree.com.au";
+            $data['from'] = "hk@gmail.com";
             $data['fromName'] = "Befree noreply";
 
             $store = storeMail($request, $data);
