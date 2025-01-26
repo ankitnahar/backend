@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use DB;
 
 class LeaveRequestController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 22, 2018
      * Purpose   : Fetch leave Request data
      */
@@ -116,7 +116,7 @@ class LeaveRequestController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Store leave Request data
      */

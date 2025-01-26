@@ -107,7 +107,7 @@ class HolidayControllerDetail extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Store holiday data
      */
@@ -228,7 +228,7 @@ class HolidayControllerDetail extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

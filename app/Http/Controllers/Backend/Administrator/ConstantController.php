@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class ConstantController extends Controller {
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 19, 2018
      * Purpose: List out constant
      * @param  Illuminate\Http\Request  $request
@@ -81,7 +81,7 @@ class ConstantController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 19, 2018
      * Purpose: Update constant setting
      * @param  Illuminate\Http\Request  $request

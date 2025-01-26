@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BulkAllocationController extends Controller {
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Nov 29, 2018
      * Purpose: Modified bulk allocation user details
      * @param  Illuminate\Http\Request  $request
@@ -68,7 +68,7 @@ class BulkAllocationController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Nov 16, 2018
      * Purpose: Fetch allocate user entity list
      * @param  Illuminate\Http\Request  $request
@@ -94,7 +94,7 @@ class BulkAllocationController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Nov 16, 2018
      * Purpose: Fetch user services
      * @param  Illuminate\Http\Request  $request
@@ -123,7 +123,7 @@ class BulkAllocationController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Nov 29, 2018
      * Purpose: De allocation user from allocation
      * @param  Illuminate\Http\Request  $request
@@ -194,7 +194,7 @@ class BulkAllocationController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: May 16, 2019
      * Purpose: Fetch entity id using their code
      * @param  Illuminate\Http\Request  $request

@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\MasterChecklistQuestion;
 
 class MasterChecklistQuestionController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Worksheet master checklist question listing api
      */
@@ -111,7 +111,7 @@ class MasterChecklistQuestionController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Store worksheet checklist question
      */
@@ -140,7 +140,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Fetch master checklist question details
      */
@@ -161,7 +161,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Update master checklist question details
      */
@@ -194,7 +194,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Fetch master activity listing with task
      */
@@ -229,7 +229,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 26, 2018
      * Purpose   : Validate worksheet master checklist question input
      */

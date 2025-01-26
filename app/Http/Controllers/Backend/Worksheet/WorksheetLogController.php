@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\WorksheetLog;
 
 class WorksheetLogController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Aug 20, 2018
      * Purpose   : Worksheet log listing api
      */
@@ -79,7 +79,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Aug 20, 2018
      * Purpose   : Store worksheet status log
      */
@@ -104,7 +104,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Fetch master checklist details
      */
@@ -125,7 +125,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update master checklist details
      */
@@ -164,7 +164,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate worksheet master checklist input
      */

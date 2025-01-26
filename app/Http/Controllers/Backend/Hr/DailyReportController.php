@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrNojob;
 
 class DailyReportController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 22, 2018
      * Purpose   : Fetch no job data
      */

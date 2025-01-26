@@ -117,7 +117,7 @@ class WelcomeKitController extends Controller {
           } */
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Store shift data
      */
@@ -188,7 +188,7 @@ class WelcomeKitController extends Controller {
           } */
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show shift data
      */
@@ -236,7 +236,7 @@ class WelcomeKitController extends Controller {
         }*/
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Make shift In active.
      */
@@ -258,7 +258,7 @@ class WelcomeKitController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

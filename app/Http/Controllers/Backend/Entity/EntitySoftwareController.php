@@ -8,7 +8,7 @@ use App\Models\Backend\EntitySoftware;
 use Illuminate\Support\Facades\Crypt;
 
 class EntitySoftwareController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Fetch entity software data
      */
@@ -89,7 +89,7 @@ class EntitySoftwareController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 05, 2018
      * Purpose   : Store entity entity software detail
      */
@@ -126,7 +126,7 @@ class EntitySoftwareController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Show entity software
      */
@@ -148,7 +148,7 @@ class EntitySoftwareController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity software
      */
@@ -189,7 +189,7 @@ class EntitySoftwareController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity software
      */
@@ -210,7 +210,7 @@ class EntitySoftwareController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity software
      */

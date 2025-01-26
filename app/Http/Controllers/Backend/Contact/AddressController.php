@@ -8,7 +8,7 @@ use App\Models\Backend\Address;
 use DB;
 
 class AddressController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 05, 2018
      * Purpose   : Fetch entity address data
      */
@@ -132,7 +132,7 @@ class AddressController extends Controller {
         }*/
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 05, 2018
      * Purpose   : Store entity entity address detail
      */
@@ -169,7 +169,7 @@ class AddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 05, 2018
      * Purpose   : Show entity address
      */
@@ -190,7 +190,7 @@ class AddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 05, 2018
      * Purpose   : Update entity address
      */

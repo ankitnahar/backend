@@ -47,7 +47,7 @@ class AppServiceProvider extends ServiceProvider {
             return true;*/
         });
 
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for minimum with required if condition only, so dont change it for individual used
          */
         Validator::extend('min_if', function ($attribute, $value, $parameters, $validator) {
@@ -57,7 +57,7 @@ class AppServiceProvider extends ServiceProvider {
             }
             return true;
         });
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for check multiple coulmn unique conditions
          */
         Validator::extend('uniqueTwoColumn', function ($attribute, $value, $parameters, $validator) {
@@ -72,7 +72,7 @@ class AppServiceProvider extends ServiceProvider {
             }
         });
 
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for check multiple coulmn unique conditions
          */
         Validator::extend('uniqueTwoColumn', function ($attribute, $value, $parameters, $validator) {
@@ -91,7 +91,7 @@ class AppServiceProvider extends ServiceProvider {
             return Hash::check($value, Auth::user()->password);
         });
 
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for check multiple emails validatio
          */
         Validator::extend('email_array', function($attribute, $value, $parameters, $validator) {
@@ -111,14 +111,14 @@ class AppServiceProvider extends ServiceProvider {
                 return false;
             }
         });
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for check only alpha character + space only
          */
         Validator::extend('alpha_spaces', function($attribute, $value) {
             return preg_match('/^[\pL\s]+$/u', $value);
         });
 
-        /* Created By - Pankaj
+        /*
          * Used - This Function is used for check numeric 
          */
         Validator::extend('phone_number', function($attribute, $value) {
@@ -129,7 +129,7 @@ class AppServiceProvider extends ServiceProvider {
             }
         });
         
-         /* Created By - Pankaj
+         /*
          * Used - This Function is used for check decimal 
          */
         Validator::extend('decimal', function($attribute, $value) {

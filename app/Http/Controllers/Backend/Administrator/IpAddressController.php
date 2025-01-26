@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class IpAddressController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Dec 22, 2018
      * Purpose   : Fetch ip address details
      */
@@ -75,7 +75,7 @@ class IpAddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Dec 22, 2018
      * Purpose   : Store ip address details
      */
@@ -110,7 +110,7 @@ class IpAddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Dec 22, 2018
      * Purpose   : Show ip address details
      */
@@ -131,7 +131,7 @@ class IpAddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Dec 22, 2018
      * Purpose   : Update ip address details
      */
@@ -167,7 +167,7 @@ class IpAddressController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: Dec 22, 2018
      * Purpose   : Ip address details permanently removed.
      */

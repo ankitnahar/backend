@@ -207,7 +207,7 @@ class SubClientController extends Controller {
     }
        
     
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Fetch master checklist details
      */
@@ -234,7 +234,7 @@ class SubClientController extends Controller {
         }
     }
     
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: March 12, 2019
      * Purpose   : Entity listing 
      */

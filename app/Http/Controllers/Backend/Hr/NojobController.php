@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrNojob;
 
 class NojobController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 22, 2018
      * Purpose   : Fetch no job data
      */
@@ -132,7 +132,7 @@ class NojobController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Store no job data
      */
@@ -207,7 +207,7 @@ class NojobController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

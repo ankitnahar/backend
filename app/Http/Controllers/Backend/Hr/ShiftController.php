@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrShift;
 
 class ShiftController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Fetch shift data
      */
@@ -108,7 +108,7 @@ class ShiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Store shift data
      */
@@ -202,7 +202,7 @@ class ShiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show shift data
      */
@@ -223,7 +223,7 @@ class ShiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show shift data
      */
@@ -282,7 +282,7 @@ class ShiftController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Make shift In active.
      */
@@ -317,7 +317,7 @@ class ShiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DiscontinueQuestionController extends Controller {
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 03, 2018
      * Purpose: Get discontinue question detail
      * @param  Illuminate\Http\Request  $request
@@ -110,7 +110,7 @@ class DiscontinueQuestionController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 03, 2018
      * Purpose: Store discontinue question details
      * @param  Illuminate\Http\Request  $request
@@ -146,7 +146,7 @@ class DiscontinueQuestionController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 03, 2018
      * Purpose: Get particular discontinue question details
      * @param  int  $id   //timesheet id

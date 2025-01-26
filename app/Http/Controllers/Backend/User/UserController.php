@@ -444,7 +444,7 @@ class UserController extends Controller {
     }
 
     /*
-     * Created By - Pankaj
+     
      * Created On - 25/04/2018
      * Common function for save history
      */
@@ -652,7 +652,7 @@ class UserController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: May 17, 2018
      * Purpose   : Bulk first and second approval set
      * $param    : Submit excel file

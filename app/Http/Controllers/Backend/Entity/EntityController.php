@@ -431,7 +431,7 @@ class EntityController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 02, 2018
      * Reason: Destory entity data.
      */
@@ -452,7 +452,7 @@ class EntityController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 02, 2018
      * Reason: Checkout trading and legal information duplication.
      */

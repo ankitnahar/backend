@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrExceptionshift;
 
 class ExceptionshiftController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Fetch exception shift data
      */
@@ -114,7 +114,7 @@ class ExceptionshiftController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Store exception shift data
      */
@@ -149,7 +149,7 @@ class ExceptionshiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show exception shift data
      */
@@ -173,7 +173,7 @@ class ExceptionshiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show exception shift data
      */
@@ -207,7 +207,7 @@ class ExceptionshiftController extends Controller {
         }*/
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Make exception shift In active.
      */
@@ -233,7 +233,7 @@ class ExceptionshiftController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */
