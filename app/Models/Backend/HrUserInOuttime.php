@@ -17,7 +17,7 @@ class HrUserInOuttime extends Model {
         return $this->belongsTo(\App\Models\User::class, 'user_id', 'id');
     }
 
-    /
+    /*
      * Created on: May 04, 2018
      * Purpose   : Arrange data after fetch from table
      */
