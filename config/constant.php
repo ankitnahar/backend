@@ -10,7 +10,7 @@ return [
     "SUPERADMIN" => 7,
     "TAM" => 9,
     "DH" => 15,
-    "BILLINGID" => "billing@befree.com.au",
+    "BILLINGID" => "billing@gmail.com",
     "JOBTRACKINGCATEGORY" => 'cc603993-5594-4cbc-96e7-0afb5e23ba15',
     //Payment detail
     'payment' => [
@@ -359,7 +359,7 @@ return [
         'client_id' => '1000.ZTJDW7B6FZARALJH99WN53FQLQ79FO',
         'client_secret' => 'a706a306801ef11436e3ec747bac9056ff9827f60c',
         'redirect_uri' => 'https://befreecrm.com.au/',
-        'currentUserEmail' => 'info@befree.com.au',
+        'currentUserEmail' => 'info@gmail.com',
         'applicationLogFilePath' => base_path() . '/public',
         'db_port' => env('DB_PORT'),
         'db_name' => env('DB_DATABASE'),
@@ -513,8 +513,8 @@ return [
         '2' => 'Completed'
     ],
     'newsletterFromEmail' => [
-        'noreply<no-reply@befree.com.au>' => 'no-reply@befree.com.au',
-        'payroll<payroll@befree.com.au>' => 'payroll@befree.com.au'
+        'noreply<no-reply@gmail.com>' => 'no-reply@gmail.com',
+        'payroll<payroll@gmail.com>' => 'payroll@gmail.com'
     ],   
     'subService' =>[
         "8"=>"6",

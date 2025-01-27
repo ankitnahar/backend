@@ -58,70 +58,10 @@ $router->group(['prefix' => 'v1.0'], function() use ($router) {
 //            }
         });
 
-        // Run Cron Through API
-        $router->post('/importzohoclients', function () {
-            \Illuminate\Support\Facades\Artisan::call('Opportunities:fromzoho');
-            return createResponse(config('httpResponse.SUCCESS'), "Client import successfull", ['data' => 'Client import successfull']);
-        });
-        
-         $router->post('/informationAdd', function () {
-            \Illuminate\Support\Facades\Artisan::call('info:add');
-            return createResponse(config('httpResponse.SUCCESS'), "Information added successfull", ['data' => 'Information added successfull']);
-        });
+       
     });
 
     
 
-    $router->get('/cronjob', function(Illuminate\Http\Request $request) {
-        $case = $request->get('name');
-        switch ($case) {
-            case 'updateremarkpreviousday':
-                $obj = new App\Console\Commands\HrUpdateRemarkPreviousDay();
-                $argu = $request->get('date');
-                break;
-            case 'sendemail':
-                $obj = new App\Console\Commands\SendmailCommand();
-                $argu = $request->get('date');
-                break;
-            case 'rejectedremainingapproval':
-                $obj = new App\Console\Commands\HrRejectedRemainingApproval();
-                $argu = $request->get('date');
-                break;
-            case 'recurring':
-                $obj = new App\Console\Commands\PriorRecurringCommand();
-                $argu = $request->get('date');
-                break;            
-            case 'timesheet':
-                $obj = new \App\Console\Commands\Duetimesheet();
-                $argu = $request->get('date');
-                break;
-            case 'biotime':
-                $obj = new App\Console\Commands\HrBioTime();
-                $argu = $request->get('date');
-                break;
-            case 'docusign':
-                $obj = new App\Console\Commands\QuoteDocusignStatus();
-                $argu = $request->get('date');
-                break;
-            case 'jira':
-                $obj = new App\Console\Commands\JiraTimesheet();
-                $argu = $request->get('date');
-                break;
-            case 'quotereminder':
-                $obj = new App\Console\Commands\QuoteAutoReminder();
-                $argu = $request->get('date');
-                break;
-            case 'information':
-                $obj = new App\Console\Commands\InformationGenerateCommand();
-                $argu = $request->get('date');
-                break;
-            case 'reminder':
-                $obj = new App\Console\Commands\BirthdayCommand();
-                $argu = $request->get('date');
-                break;
-            default :
-                exit('Not valid cron');
-        }
-        $obj->handle($argu);
-    });
+    
 });

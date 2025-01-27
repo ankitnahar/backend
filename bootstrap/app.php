@@ -136,8 +136,7 @@ $app->router->group([
 ], function ($router) {
     require __DIR__.'/../routes/Commons.php';
 
-    requireMultiRoutes(glob("../routes/admin/*.php"), $router); // Require all the route files under admin directory (This won't work recursively)
-    requireMultiRoutes(glob("../routes/client/*.php"), $router); // Require all the route files under client directory (This won't work recursively)
+    requireMultiRoutes(glob("../routes/admin/*.php"), $router);  // Require all the route files under client directory (This won't work recursively)
     requireMultiRoutes(glob("../routes/worksheet/*.php"), $router); // Require all the route files under client directory (This won't work recursively)
    
 });
