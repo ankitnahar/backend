@@ -140,7 +140,7 @@ class ClientUserQueryController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity software
      */

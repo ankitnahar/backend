@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\EntitySpecialnotes;
 
 class SpecailnotesController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Fetch entity special notes data
      */
@@ -76,7 +76,7 @@ class SpecailnotesController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Store entity special notes
      */
@@ -106,7 +106,7 @@ class SpecailnotesController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Show entity special notes
      */
@@ -127,7 +127,7 @@ class SpecailnotesController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity special notes
      */
@@ -160,7 +160,7 @@ class SpecailnotesController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update entity special notes fields by archive on and archive by.
      */
@@ -188,7 +188,7 @@ class SpecailnotesController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

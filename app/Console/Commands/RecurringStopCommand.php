@@ -52,7 +52,7 @@ class RecurringStopCommand extends Command {
                         $lastminus7 = strtotime("-7 days ", $lastDate);
                         if ($lastminus7 == strtotime(date('Y-m-d'))) {
                             if ($emailTemplate->is_active) {
-                                //$from = "noreply-bdms@befree.com.au";
+                                //$from = "hk@gmail.com";
                                 $to = $emailTemplate->to;
                                 $entity = \App\Models\Backend\Entity::whereRaw("id IN($row->entity_id)")->select(DB::raw("GROUP_CONCAT(billing_name) AS clients"))->first();
                                 $ff =($row->fixed_fee == 1) ? 'Yes' :'No';

@@ -40,7 +40,7 @@ class CheckRecurringCommand extends Command {
                         ->whereRaw("DATE(invoice.created_on) = '" . $recurringDate . "'");
                 if ($invoice->count() == 0) {
 
-                    $emailData['to'] = 'bdmsdeveloper@befree.com.au,billing@befree.com.au';
+                    $emailData['to'] = 'hkdvelope@gmail.com,billing@gmail.com';
                     $emailData['subject'] = 'Urgent :: Invoice not Recurred Today';
                     $emailData['content'] = 'Urgent :: Invoice not Recurred Today';
 
@@ -74,7 +74,7 @@ class CheckRecurringCommand extends Command {
                         $content .= implode("<br/>", $InvoiceNotRecurre);
                         $content .= '<br/><br/>Thank You <br/> Befree Data Management System';
 
-                        $emailData['to'] = 'bdmsdeveloper@befree.com.au,billing@befree.com.au';
+                        $emailData['to'] = 'hkdvelope@gmail.com,billing@gmail.com';
                         $emailData['subject'] = 'Urgent :: Invoice not Recurred for the below client list';
                         $emailData['content'] = $content;
 

@@ -254,7 +254,7 @@ class UserController extends Controller {
             $content = str_replace("[USERNAME]", $user->user_login_name, $content);
             $content = str_replace("[PASSWORD]", $password, $content);
             $data['content'] = $content;
-            $data['from'] = "noreply-bdms@befree.com.au";
+            $data['from'] = "hk@gmail.com";
             $data['fromName'] = "Befree noreply";
 
             $store = storeMail($request, $data);
@@ -444,7 +444,7 @@ class UserController extends Controller {
     }
 
     /*
-     * Created By - Pankaj
+     
      * Created On - 25/04/2018
      * Common function for save history
      */
@@ -652,7 +652,7 @@ class UserController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: May 17, 2018
      * Purpose   : Bulk first and second approval set
      * $param    : Submit excel file

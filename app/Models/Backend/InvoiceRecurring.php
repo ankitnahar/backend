@@ -92,7 +92,7 @@ class InvoiceRecurring extends Model {
     }
 
     /*
-     * Created by - Pankaj
+     
      * save history when user information update 
      */
 

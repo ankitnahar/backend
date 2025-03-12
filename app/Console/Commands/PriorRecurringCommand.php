@@ -107,8 +107,8 @@ class PriorRecurringCommand extends Command {
                             $table .= '</table></div>';
                             $content = str_replace("[CLIENTLIST]", $table, $content);
 
-                            $emailData['to'] = $userId != 0 ? strtolower($user->email) : 'billing@befree.com.au';
-                            $emailData['cc'] = (isset($emailTemplate->cc) && $emailTemplate->cc != '') ? strtolower($emailTemplate->cc) . ',billing@befree.com.au' : 'billing@befree.com.au';
+                            $emailData['to'] = $userId != 0 ? strtolower($user->email) : 'billing@gmail.com';
+                            $emailData['cc'] = (isset($emailTemplate->cc) && $emailTemplate->cc != '') ? strtolower($emailTemplate->cc) . ',billing@gmail.com' : 'billing@gmail.com';
                             $emailData['bcc'] = strtolower($emailTemplate->bcc);
                             $emailData['subject'] = $emailTemplate->subject;
                             $emailData['content'] = $content;
@@ -146,7 +146,7 @@ class PriorRecurringCommand extends Command {
 //                $table .= '</table></div>';
 //                $content = str_replace("[CLIENTLIST]", $table, $content);
 //
-//                $emailData['to'] = 'billing@befree.com.au';
+//                $emailData['to'] = 'billing@gmail.com';
 //                $emailData['cc'] = strtolower($emailTemplate->cc);
 //                $emailData['bcc'] = strtolower($emailTemplate->bcc);
 //                $emailData['subject'] = $emailTemplate->subject;

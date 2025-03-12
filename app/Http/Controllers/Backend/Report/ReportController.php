@@ -9,7 +9,7 @@ use App\Models\Backend\ReportSaved;
 class ReportController extends Controller {
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: July 30, 2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse
@@ -87,7 +87,7 @@ class ReportController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: July 30, 2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse
@@ -148,7 +148,7 @@ class ReportController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: July 30, 2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse
@@ -185,7 +185,7 @@ class ReportController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: July 30, 2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse
@@ -209,7 +209,7 @@ class ReportController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: July 31, 2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse
@@ -271,7 +271,7 @@ class ReportController extends Controller {
     }
 
     /**
-     * created By Pankaj
+     
      * created on 01-08-2018
      * fetch field from database
      * @param  Illuminate\Http\Request  $request

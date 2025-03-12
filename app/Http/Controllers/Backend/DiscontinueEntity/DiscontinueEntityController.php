@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DiscontinueEntityController extends Controller {
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 05, 2018
      * Purpose: Get discontinue detail
      * @param  Illuminate\Http\Request  $request
@@ -157,7 +157,7 @@ class DiscontinueEntityController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 05, 2018
      * Purpose: Store discontinue details
      * @param  Illuminate\Http\Request  $request
@@ -287,7 +287,7 @@ class DiscontinueEntityController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 05, 2018
      * Purpose: Get particular discontinue details
      * @param  int  $id   //timesheet id
@@ -309,7 +309,7 @@ class DiscontinueEntityController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 05, 2018
      * Purpose: Get particular discontinue details
      * @param  int  $id   //timesheet id
@@ -440,7 +440,7 @@ class DiscontinueEntityController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 05, 2018
      * Purpose: Store discontinue details
      * @param  Illuminate\Http\Request  $request
@@ -495,7 +495,7 @@ class DiscontinueEntityController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 17, 2018
      * Purpose: Restore discontinue client as normals
      * @param  Illuminate\Http\Request  $request

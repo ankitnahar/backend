@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Checklistgroup;
 
 class ChecklistGroupController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Worksheet master checklist group listing api
      */
@@ -112,7 +112,7 @@ class ChecklistGroupController extends Controller {
         }*/
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Store worksheet checklist
      */
@@ -142,7 +142,7 @@ class ChecklistGroupController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Fetch master checklist details
      */
@@ -163,7 +163,7 @@ class ChecklistGroupController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Update master checklist details
      */
@@ -194,7 +194,7 @@ class ChecklistGroupController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Fetch master checklist details
      */
@@ -221,7 +221,7 @@ class ChecklistGroupController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 24, 2018
      * Purpose   : Fetch master activity listing with task
      */
@@ -252,7 +252,7 @@ class ChecklistGroupController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate worksheet master checklist group input
      */

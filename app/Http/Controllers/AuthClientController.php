@@ -137,7 +137,7 @@ class AuthClientController extends Controller {
                 $content = str_replace("[LOGINNAME]", $user->user_login_name, $content);
                 $content = str_replace("[HERE]", $link, $content);
                 $data['content'] = $content;
-                $data['from'] = "noreply-bdms@befree.com.au";
+                $data['from'] = "hk@gmail.com";
                 $data['fromName'] = "Befree noreply";
 
                 $store = storeMail($request, $data);

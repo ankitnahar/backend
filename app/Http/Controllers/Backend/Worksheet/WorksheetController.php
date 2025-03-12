@@ -731,7 +731,7 @@ class WorksheetController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Aug 20, 2018
      * @param array $request
      * @return array
@@ -863,7 +863,7 @@ class WorksheetController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Aug 20, 2018
      * @param array $request
      * @return array
@@ -935,7 +935,7 @@ class WorksheetController extends Controller {
     }
 
     /**
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Aug 11, 2018
      * @param date $startDate
      * @param date $endDate
@@ -1153,7 +1153,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Aug 12, 2018
      * @param date $startDate
      * @param int  $dueAfterDay
@@ -1179,7 +1179,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Sept 19, 2018
      * @param  Illuminate\Http\Request  $request
      */
@@ -1248,7 +1248,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Sept 19, 2018
      * @param  Illuminate\Http\Request  $request
      */
@@ -1333,7 +1333,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Sept 19, 2018
      * @param  Illuminate\Http\Request  $request
      */
@@ -1355,7 +1355,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Sept 20, 2018
      */
 
@@ -1391,7 +1391,7 @@ class WorksheetController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Aug 11, 2018
      * @param  Illuminate\Http\Request  $request
      */

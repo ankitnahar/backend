@@ -15,7 +15,7 @@ class UserHierarchyController extends Controller {
 
     /**
      * Display index page.
-     * created by Pankaj
+     
      * @return \BladeView|bool|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function update(REQUEST $request, $id) {

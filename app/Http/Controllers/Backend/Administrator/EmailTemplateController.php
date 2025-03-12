@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class EmailTemplateController extends Controller {
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 24, 2018
      * Purpose   : Fetch email template details
      */
@@ -76,7 +76,7 @@ class EmailTemplateController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 24, 2018
      * Purpose   : Show email template details
      */
@@ -97,7 +97,7 @@ class EmailTemplateController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 24, 2018
      * Purpose   : Update email template details
      */

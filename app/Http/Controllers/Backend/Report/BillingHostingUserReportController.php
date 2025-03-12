@@ -9,7 +9,7 @@ use DB;
 class BillingHostingUserReportController extends Controller {
 
     /**
-     * Created by: Pankaj
+     
      * Created on: 01-08-2018
      * @param  Illuminate\Http\Request  $request
      * @return Illuminate\Http\JsonResponse

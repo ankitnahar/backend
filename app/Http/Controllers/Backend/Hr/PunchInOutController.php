@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrUserInOuttime;
 
 class PunchInOutController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 05, 2018
      * Purpose   : Fetch in-out data
      */
@@ -119,7 +119,7 @@ class PunchInOutController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 05, 2018
      * Purpose   : Store in-out data
      */
@@ -212,7 +212,7 @@ class PunchInOutController extends Controller {
           } */
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show user in-out timedata
      */
@@ -232,7 +232,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show user in-out timedata
      */
@@ -361,7 +361,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Make user in/out time In active.
      */
@@ -382,7 +382,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 05, 2018
      * Purpose   : Validate user input
      */
@@ -398,7 +398,7 @@ class PunchInOutController extends Controller {
         return $validator;
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 15, 2018
      * Purpose   : Comman function for store and update punch time
      * @param    : 

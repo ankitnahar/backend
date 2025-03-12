@@ -12,7 +12,7 @@ use App\Models\Backend\Timesheet;
 //use App\Models\User;
 
 class AttendanceController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Fetch attendance summary data
      */
@@ -178,7 +178,7 @@ class AttendanceController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 01, 2018
      * Purpose   : Fetch attance summary fields
      */
@@ -335,7 +335,7 @@ class AttendanceController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 04, 2018
      * Purpose   : Fetch late coming data
      * @param  data array
@@ -577,7 +577,7 @@ class AttendanceController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 24, 2018
      * Purpose   : Show user in-out timedata
      */
@@ -602,7 +602,7 @@ class AttendanceController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 04, 2018
      * @param  $request array
      * Purpose: Send late coming approval to first approval
@@ -674,7 +674,7 @@ class AttendanceController extends Controller {
           } */
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 11, 2018
      * @param  $request array
      * Purpose: approved request send by staff first & second approval will be used
@@ -842,7 +842,7 @@ class AttendanceController extends Controller {
           } */
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 24, 2018
      * Purpose   : Cron file to checkout whether timesheet is fillup or not
      */
@@ -868,7 +868,7 @@ class AttendanceController extends Controller {
         $pendingTimesheet->insert($hr_detail);
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: May 24, 2018
      * Purpose   : Cron file to checkout whether timesheet is fillup or not
      */

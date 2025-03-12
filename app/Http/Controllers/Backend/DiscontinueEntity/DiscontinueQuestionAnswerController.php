@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DiscontinueQuestionAnswerController extends Controller {
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 13, 2018
      * Purpose: Get discontinue detail
      * @param  Illuminate\Http\Request  $request
@@ -155,7 +155,7 @@ class DiscontinueQuestionAnswerController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 13, 2018
      * Purpose: Get particular discontinue details
      * @param  int  $id   //timesheet id
@@ -315,7 +315,7 @@ class DiscontinueQuestionAnswerController extends Controller {
 
             // update 0 on parent entity if client discountinue
             /*
-             * Pankaj
+             
              * Date - 08-02-2019
              */
 
@@ -624,7 +624,7 @@ class DiscontinueQuestionAnswerController extends Controller {
     }
 
     /*
-     * Created by: Jayesh Shingrakhiya
+     
      * Created on: Dec 13, 2018
      * Purpose: Get particular discontinue details
      * @param  int  $id   //timesheet id

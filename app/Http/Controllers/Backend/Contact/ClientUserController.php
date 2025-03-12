@@ -153,7 +153,7 @@ class ClientUserController extends Controller {
              $emailTemplate = \App\Models\Backend\EmailTemplate::where('code', 'NEWCLIENT')->first();
                 if ($emailTemplate->is_active == 1) {
                     $data['to'] = $request->input('email');
-                    $data['from'] = 'noreply-bdms@befree.com.au';
+                    $data['from'] = 'hk@gmail.com';
                     $data['subject'] = $emailTemplate->subject;
                     $data['content'] = $emailTemplate->content;
                     storeMail('', $data);

@@ -58,7 +58,7 @@ class Contact extends Model {
                 ->leftJoin('billing_basic as bb', 'bb.entity_id', '=', 'contact.entity_id');
     }
     /*
-     * Created by - Pankaj
+     
      * save history when user information update 
      */
 

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\WorksheetTaskChecklist;
 
 class TaskChecklistController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: Aug 28, 2018
      * Purpose   : Fetch worksheet task checklist data
      */
@@ -108,7 +108,7 @@ class TaskChecklistController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: July  18, 2018
      * Purpose   : Store worksheet training data
      */
@@ -137,7 +137,7 @@ class TaskChecklistController extends Controller {
         $historyRevision = $historyRevision[0]->is_revision_history + 1;
 
         //WorksheetTaskChecklist::where('is_revision_history', 0)->update(['is_revision_history' => $historyRevision]);
-        /* Pankaj
+        /*
          * Date - 14-11-2019
          */
         WorksheetTaskChecklist::where('is_revision_history', 0)->where('worksheet_id', $worksheet_id)->update(['is_revision_history' => $historyRevision]);
@@ -329,7 +329,7 @@ class TaskChecklistController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: July 18, 2018
      * Purpose   : Show worksheet training data
      */
@@ -342,7 +342,7 @@ class TaskChecklistController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: Aug 23, 2018
      * Purpose   : Store worksheet notes data
      */
@@ -372,7 +372,7 @@ class TaskChecklistController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: Aug 23, 2018
      * Purpose   : Fetch worksheet notes
      */
@@ -438,7 +438,7 @@ class TaskChecklistController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: Sept 03, 2018
      * Purpose   : To fetch entity task checklist email view
      */
@@ -969,7 +969,7 @@ class TaskChecklistController extends Controller {
 //        }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */
@@ -1057,7 +1057,7 @@ class TaskChecklistController extends Controller {
         return storeMail('', $data);
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */
@@ -1071,7 +1071,7 @@ class TaskChecklistController extends Controller {
         return $validator;
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: Feb 15, 2019
      * Purpose   : Preview email
      */

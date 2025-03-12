@@ -134,7 +134,7 @@ class Worksheet extends Model {
     }
 
     /*
-     * Created By: Jayesh Shingrakhiya
+     
      * Created On: 17-08-2018
      * Checkout out entity allocation
      */
@@ -156,10 +156,7 @@ class Worksheet extends Model {
         return $entityChecklist;
     }
     
-    /*Pankaj
-     * Review report function
-     * Date - 13-09-2019
-     */
+
     public static function getReviewReport(){
         
        return  Worksheet::leftjoin("entity as e","e.id","worksheet.entity_id")

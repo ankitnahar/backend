@@ -50,7 +50,7 @@ class User extends Model implements AuthenticatableContract, JWTSubject {
         return [];
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /*
      * Created on: April 25, 2018
      * Purpose: get all user listing
      */
@@ -120,7 +120,7 @@ class User extends Model implements AuthenticatableContract, JWTSubject {
     }
 
     /*
-     * Created by - Pankaj
+     
      * save history when user information update 
      */
 

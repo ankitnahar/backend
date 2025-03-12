@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\WorksheetTraining;
 
 class TrainingController extends Controller {
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 18, 2018
      * Purpose   : Fetch worksheet training data
      */
@@ -98,7 +98,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July  18, 2018
      * Purpose   : Store worksheet training data
      */
@@ -122,7 +122,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 18, 2018
      * Purpose   : Show worksheet training data
      */
@@ -143,7 +143,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: July 18, 2018
      * Purpose   : Show worksheet training data
      */
@@ -176,7 +176,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /* Created by: Jayesh Shingrakhiya
+    /
      * Created on: April 20, 2018
      * Purpose   : Validate user input
      */

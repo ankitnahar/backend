@@ -288,7 +288,7 @@ class InvoiceRecurringController extends Controller {
     }
 
     /**
-     * Created by: Pankaj
+     
      * Created on: 22-08-2018
      * @param date $request
      */

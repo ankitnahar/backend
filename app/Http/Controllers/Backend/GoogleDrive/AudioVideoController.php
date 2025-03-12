@@ -180,7 +180,7 @@ class AudioVideoController extends Controller {
         }
     }
     
-   /* Created by: Jayesh Shingrakhiya
+   /
      * Created on: Dec 22, 2018
      * Purpose   : Ip address details permanently removed.
      */

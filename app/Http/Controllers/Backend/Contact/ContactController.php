@@ -348,7 +348,7 @@ class ContactController extends Controller {
     }
 
     /*
-     * Created By - Pankaj
+     
      * Created On - 25/04/2018
      * Common function for save history
      */

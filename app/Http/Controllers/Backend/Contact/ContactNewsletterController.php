@@ -142,19 +142,7 @@ class ContactNewsletterController extends Controller {
         }
         $addinList['entity_id'] = 385;
         $addinList['position'] = 1;
-        $addinList['email'] = array('akshay.m@befree.com.au',
-            'darshan.d@befree.com.au',
-            'jaivik.s@befree.com.au',
-            'vinny.g@befree.com.au',
-            'hardik.c@befree.com.au',
-            'rahul.p@befree.com.au',
-            'darshan.t@befree.com.au',
-            'billing@befree.com.au',
-            'dilip.p@befree.com.au',
-            'kevin@befree.com.au',
-            'sandeep.j@befree.com.au',
-            'rebecca@befree.com.au',
-            'garry@befree.com.au');
+       
         $news = array_merge($news, $addinList);
         //showArray($news);exit;
         DB::table('newsletter_email')->delete();
