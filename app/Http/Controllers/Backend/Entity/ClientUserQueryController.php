@@ -140,11 +140,6 @@ class ClientUserQueryController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Update entity software
-     */
-
     public function update(Request $request, $id) {
         try {
             $validator = app('validator')->make($request->all(), [

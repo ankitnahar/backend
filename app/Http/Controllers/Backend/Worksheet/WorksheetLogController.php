@@ -7,10 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\WorksheetLog;
 
 class WorksheetLogController extends Controller {
-    /
-     * Created on: Aug 20, 2018
-     * Purpose   : Worksheet log listing api
-     */
+   
 
     public function index(Request $request, $id) {
         try {
@@ -79,10 +76,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /
-     * Created on: Aug 20, 2018
-     * Purpose   : Store worksheet status log
-     */
+   
 
     public function store(Request $request) {
         try {
@@ -104,10 +98,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /
-     * Created on: July 24, 2018
-     * Purpose   : Fetch master checklist details
-     */
+   
 
     public function show(Request $request, $id) {
         try {
@@ -125,10 +116,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Update master checklist details
-     */
+ 
 
     public function update(Request $request, $id) {
         try {
@@ -164,10 +152,7 @@ class WorksheetLogController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Validate worksheet master checklist input
-     */
+  
 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [

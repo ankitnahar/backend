@@ -6,10 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class EmailSignatureController extends Controller {
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Fetch email signature details
-     */
 
     public function index(Request $request) {
         try {
@@ -75,11 +71,7 @@ class EmailSignatureController extends Controller {
         }
     }
 
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Store email signature details
-     */
-
+   
     public function store(Request $request) {
         try {
             $signatureOption = config('constant.manageSignatureOption');
@@ -144,10 +136,6 @@ class EmailSignatureController extends Controller {
         }
     }
 
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Show email signature details
-     */
 
     public function show($id) {
         try {
@@ -165,10 +153,7 @@ class EmailSignatureController extends Controller {
         }
     }
 
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Update email signature details
-     */
+
 
     public function update(Request $request, $id) {
         try {
@@ -226,10 +211,7 @@ class EmailSignatureController extends Controller {
         }
     }
 
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Email signature details permanently removed.
-     */
+ 
 
     public function destroy(Request $request, $id) {
         try {

@@ -6,10 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class IpAddressController extends Controller {
-    /
-     * Created on: Dec 22, 2018
-     * Purpose   : Fetch ip address details
-     */
 
     public function index(Request $request) {
         try {

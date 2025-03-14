@@ -163,22 +163,17 @@ class Timesheet extends Model {
                 
     }
 
-    /, Sept 22, 2018, For fetch frequency name */
     public function frequencyId(){
         return $this->belongsTo(\App\Models\Backend\Frequency::class, 'frequency_id', 'id');
-    }
-    
-    /, Sept 22, 2018, For fetch sub activity name */
+    }    
     public function subactivityCode(){
         return $this->belongsTo(\App\Models\Backend\SubActivity::class, 'subactivity_code', 'subactivity_code');
     }
     
-    /, Sept 22, 2018, For fetch bank name */
     public function payrollOptionId(){
         return $this->belongsTo(\App\Models\Backend\TimesheetPayrollOption::class, 'payroll_option_id', 'id');
     }
     
-    /, Sept 22, 2018, For fetch reviewer name */
     public function reviewerId() {
         return $this->belongsTo(\App\Models\User::class, 'reviewer_id', 'id');
     }

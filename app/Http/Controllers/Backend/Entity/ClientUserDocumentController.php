@@ -178,11 +178,6 @@ class ClientUserDocumentController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Update entity software
-     */
-
     public function update(Request $request, $id) {
         try {
 

@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrLocation;
 
 class LocationController extends Controller {
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Fetch shift data
-     */
-
+ 
     public function index(Request $request) {
         try {
             //validate request parameters
@@ -77,10 +73,6 @@ class LocationController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Store shift data
-     */
 
     public function store(Request $request) {
         try {
@@ -102,10 +94,7 @@ class LocationController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Show shift data
-     */
+
 
     public function show($id) {
         try {
@@ -123,10 +112,7 @@ class LocationController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Show shift data
-     */
+  
 
     public function update(Request $request, $id) {
         try {
@@ -155,11 +141,7 @@ class LocationController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Make shift In active.
-     */
-
+   
     public function destroy(Request $request, $id) {
         try {
             $location = HrLocation::find($id);
@@ -177,10 +159,7 @@ class LocationController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Validate user input
-     */
+ 
 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [

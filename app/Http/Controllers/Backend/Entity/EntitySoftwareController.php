@@ -8,11 +8,7 @@ use App\Models\Backend\EntitySoftware;
 use Illuminate\Support\Facades\Crypt;
 
 class EntitySoftwareController extends Controller {
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Fetch entity software data
-     */
-
+ 
     public function index(Request $request) {
         try {
             //validate request parameters

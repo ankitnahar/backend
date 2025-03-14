@@ -12,12 +12,7 @@ use App\Models\Backend\Entity;
  */
 class EntityController extends Controller {
 
-    /**
-     * Get clients detail
-     *
-     * @param  Illuminate\Http\Request  $request
-     * @return Illuminate\Http\JsonResponse
-     */
+
     public function index(Request $request) {
         //try {
         //validate request parameters
@@ -198,19 +193,13 @@ class EntityController extends Controller {
             \App\Http\Controllers\Backend\Billing\BillingServicesController::addBillingForOther($client->id);
 
         autoAssignAllEntityUser($client->id);
+        }
         return createResponse(config('httpResponse.SUCCESS'), 'Entity has been added successfully', ['data' => $client]);
 //        } catch (\Exception $e) {
 //            app('log')->error("Entity creation failed " . $e->getMessage());
 //            return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not add entity', ['error' => 'Could not add entity']);
 //        }
     }
-
-    /**
-     * get particular client details
-     *
-     * @param  int  $id   //Client id
-     * @return Illuminate\Http\JsonResponse
-     */
     public function show(Request $request, $id) {
         //try {
         $validator = app('validator')->make($request->all(), [

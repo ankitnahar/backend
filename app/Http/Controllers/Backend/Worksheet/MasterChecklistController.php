@@ -7,11 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\MasterChecklist;
 
 class MasterChecklistController extends Controller {
-    /
-     * Created on: July 24, 2018
-     * Purpose   : Worksheet master checklist listing api
-     */
-
+  
     public function index(Request $request) {
         try {
             //validate request parameters
@@ -113,10 +109,7 @@ class MasterChecklistController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Store worksheet checklist
-     */
+    
 
     public function store(Request $request) {
         try {
@@ -140,10 +133,7 @@ class MasterChecklistController extends Controller {
         }
     }
 
-    /
-     * Created on: July 24, 2018
-     * Purpose   : Fetch master checklist details
-     */
+
 
     public function show(Request $request, $id) {
         try {
@@ -161,10 +151,6 @@ class MasterChecklistController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Update master checklist details
-     */
 
     public function update(Request $request, $id) {
         try {
@@ -200,11 +186,7 @@ class MasterChecklistController extends Controller {
         }
     }
 
-    /
-     * Created on: July 24, 2018
-     * Purpose   : Fetch master activity listing with task
-     */
-
+  
     public function getMasterActivity() {
         try {
             // get master activity 
@@ -216,11 +198,7 @@ class MasterChecklistController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Validate worksheet master checklist input
-     */
-
+ 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [
             'master_activity_id' => 'required|numeric',

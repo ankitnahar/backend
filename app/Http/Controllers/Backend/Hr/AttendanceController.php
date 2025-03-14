@@ -12,11 +12,7 @@ use App\Models\Backend\Timesheet;
 //use App\Models\User;
 
 class AttendanceController extends Controller {
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Fetch attendance summary data
-     */
-
+   
     public function summary(Request $request) {
         //try {
         //validate request parameters
@@ -178,10 +174,7 @@ class AttendanceController extends Controller {
 //        }
     }
 
-    /
-     * Created on: May 01, 2018
-     * Purpose   : Fetch attance summary fields
-     */
+
 
     public function summaryReport(Request $request) {
         //try {
@@ -335,13 +328,7 @@ class AttendanceController extends Controller {
 //        }
     }
 
-    /
-     * Created on: May 04, 2018
-     * Purpose   : Fetch late coming data
-     * @param  data array
-     */
-
-    public function updateAdjustment(Request $request, $id) {
+   public function updateAdjustment(Request $request, $id) {
         //try {
         $validator = app('validator')->make($request->all(), [
             'adjustment' => 'required',
@@ -577,10 +564,7 @@ class AttendanceController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Show user in-out timedata
-     */
+
 
     public function show($id) {
         try {
@@ -601,12 +585,6 @@ class AttendanceController extends Controller {
             return createResponse(config('httpResponse.SERVER_ERROR'), 'Could not get late coming detail.', ['error' => 'Could not late coming detail.']);
         }
     }
-
-    /
-     * Created on: May 04, 2018
-     * @param  $request array
-     * Purpose: Send late coming approval to first approval
-     */
 
     public function approvalRequest(Request $request, $id) {
         //try {
@@ -674,11 +652,7 @@ class AttendanceController extends Controller {
           } */
     }
 
-    /
-     * Created on: May 11, 2018
-     * @param  $request array
-     * Purpose: approved request send by staff first & second approval will be used
-     */
+   
 
     public function approvedRequest(Request $request, $id) {
         //try {
@@ -842,10 +816,7 @@ class AttendanceController extends Controller {
           } */
     }
 
-    /
-     * Created on: May 24, 2018
-     * Purpose   : Cron file to checkout whether timesheet is fillup or not
-     */
+
 
     public function checkPendingtimesheet(Request $request) {
 
@@ -867,115 +838,6 @@ class AttendanceController extends Controller {
         $pendingTimesheet = new PendingTimesheet;
         $pendingTimesheet->insert($hr_detail);
     }
-
-    /
-     * Created on: May 24, 2018
-     * Purpose   : Cron file to checkout whether timesheet is fillup or not
-     */
-
-    /* public function pendingTimesheet(Request $request) {
-      try {
-      //validate request parameters
-      $validator = app('validator')->make($request->all(), [
-      'sortOrder' => 'in:asc,desc',
-      'pageNumber' => 'numeric|min:1',
-      'recordsPerPage' => 'numeric|min:0',
-      'search' => 'json'
-      ], []);
-
-      if ($validator->fails()) // Return error message if validation fails
-      return createResponse(config('httpResponse.UNPROCESSED'), "Request parameter missing.", ['error' => $validator->errors()->first()]);
-
-      // define soring parameters
-      $sortBy = ($request->has('sortBy')) ? $request->get('sortBy') : 'id';
-      $sortOrder = ($request->has('sortOrder')) ? $request->get('sortOrder') : 'asc';
-      $pager = [];
-
-      $pendingTimesheet = PendingTimesheet::with('assignee:id,userfullname,user_bio_id')->select('user_id', app('db')->raw('GROUP_CONCAT(DATE) as date'), app('db')->raw('count(user_id) as total_days'));
-      if ($sortBy == 'user_id') {
-      $pendingTimesheet = $pendingTimesheet->leftjoin("user as u", "u.id", "hr_pendingtimesheet.$sortBy");
-      $sortBy = 'userfullname';
-      }
-
-      // $search = '{"dateformat":{"year":{"date":"' . date('Y') . '"},"month":{"date":"' . date('m') . '"}}}';
-      if ($request->has('search')) {
-      $decode = json_decode($request->get('search'));
-      if (!isset($decode->dateformat->yearmonth) && !isset($decode->dateformat->year))
-      $decode->dateformat->year = array('date' => date('Y'));
-
-      if (!isset($decode->dateformat->yearmonth) && !isset($decode->dateformat->month))
-      $decode->dateformat->month = array('date' => date('m'));
-
-      if (!isset($decode->dateformat->year) && !isset($decode->dateformat->month) && !isset($decode->dateformat->yearmonth))
-      $decode->dateformat->yearmonth = array('date' => date('Y-m'));
-
-      if (isset($decode->dateformat->month->date) && isset($decode->dateformat->year->date) && $decode->dateformat->month->date != '' && $decode->dateformat->year->date != '')
-      $duration = date('M', strtotime($decode->dateformat->month->date)) . '-' . $decode->dateformat->year->date;
-      else
-      $duration = date('M-Y', strtotime($decode->dateformat->yearmonth->date));
-
-      $search = json_encode($decode);
-      }
-      $pendingTimesheet = search($pendingTimesheet, $search);
-
-      //            echo $pendingTimesheet->groupBy('user_id')->toSql();
-      //            die;
-      // Check if all records are requested
-      if ($request->has('records') && $request->get('records') == 'all') {
-      $pendingTimesheet = $pendingTimesheet->orderBy($sortBy, $sortOrder)->get();
-      } else { // Else return paginated records
-      // Define pager parameters
-      $pageNumber = ($request->has('pageNumber')) ? $request->get('pageNumber') : config('pager.pageNumber');
-      $recordsPerPage = ($request->has('recordsPerPage')) ? $request->get('recordsPerPage') : config('pager.recordsPerPage');
-      $skip = ($pageNumber - 1) * $recordsPerPage;
-      $take = $recordsPerPage;
-
-      //count number of total records
-      $totalRecords = count($pendingTimesheet->get());
-      $pendingTimesheet = $pendingTimesheet->orderBy($sortBy, $sortOrder)
-      ->skip($skip)
-      ->take($take);
-      //echo $pendingTimesheet->toSql(); die;
-      $pendingTimesheet = $pendingTimesheet->get();
-      $filteredRecords = count($pendingTimesheet);
-
-      $pager = ['sortBy' => $sortBy,
-      'sortOrder' => $sortOrder,
-      'pageNumber' => $pageNumber,
-      'recordsPerPage' => $recordsPerPage,
-      'totalRecords' => $totalRecords,
-      'filteredRecords' => $filteredRecords];
-      }
-
-      if ($request->has('excel') && $request->get('excel') == 1) {
-      $data = $pendingTimesheet->toArray();
-      $column = array();
-      $column[] = ['Sr.No', 'Bio Metric ID', 'Staff name', 'Duration', 'Date', 'No fo days'];
-      if (!empty($data)) {
-      $columnData = array();
-      $i = 1;
-      foreach ($data as $value) {
-      $columnData[] = $i;
-      $columnData[] = $value['assignee']['user_bio_id'] != '' ? $value['assignee']['user_bio_id'] : '-';
-      $columnData[] = $value['assignee']['userfullname'];
-      $columnData[] = $value['date'];
-      $columnData[] = $duration;
-      $columnData[] = $value['total_days'];
-      $column[] = $columnData;
-      $columnData = array();
-      $i++;
-      }
-      }
-      return exportExcelsheet($column, 'Attendance summary', 'xlsx', 'A1:F1');
-      }
-
-      return createResponse(config('httpResponse.SUCCESS'), "Pending timesheet summary list.", ['data' => $pendingTimesheet], $pager);
-      } catch (\Exception $e) {
-      app('log')->error("Attendance summary listing failed : " . $e->getMessage());
-
-      return createResponse(config('httpResponse.SERVER_ERROR'), "Error while listing pendign timesheet summary list", ['error' => 'Server error.']);
-      }
-      } */
 
     public function pendingTimesheet(Request $request) {
         try {

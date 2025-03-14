@@ -180,10 +180,6 @@ class AudioVideoController extends Controller {
         }
     }
     
-   /
-     * Created on: Dec 22, 2018
-     * Purpose   : Ip address details permanently removed.
-     */
 
     public function destroy(Request $request, $id) {
         try {

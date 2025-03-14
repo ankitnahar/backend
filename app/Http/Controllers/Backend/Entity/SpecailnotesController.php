@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\EntitySpecialnotes;
 
 class SpecailnotesController extends Controller {
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Fetch entity special notes data
-     */
-
+  
     public function index(Request $request, $id) {
         //try {
             //validate request parameters

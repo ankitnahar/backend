@@ -7,10 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\HrUserInOuttime;
 
 class PunchInOutController extends Controller {
-    /
-     * Created on: May 05, 2018
-     * Purpose   : Fetch in-out data
-     */
+  
 
     public function index(Request $request) {
         //try {
@@ -119,10 +116,7 @@ class PunchInOutController extends Controller {
 //        }
     }
 
-    /
-     * Created on: May 05, 2018
-     * Purpose   : Store in-out data
-     */
+  
 
     public function store(Request $request) {
         //  try {
@@ -212,10 +206,7 @@ class PunchInOutController extends Controller {
           } */
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Show user in-out timedata
-     */
+    
 
     public function show($id) {
         try {
@@ -232,10 +223,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Show user in-out timedata
-     */
+ 
 
     public function update(Request $request, $id) {
         try {
@@ -361,10 +349,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Make user in/out time In active.
-     */
+   
 
     public function destroy(Request $request, $id) {
         try {
@@ -382,10 +367,7 @@ class PunchInOutController extends Controller {
         }
     }
 
-    /
-     * Created on: May 05, 2018
-     * Purpose   : Validate user input
-     */
+  
 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [
@@ -398,11 +380,7 @@ class PunchInOutController extends Controller {
         return $validator;
     }
 
-    /
-     * Created on: May 15, 2018
-     * Purpose   : Comman function for store and update punch time
-     * @param    : 
-     */
+    
 
     public static function updateDetail($date, $user_id) {
         $punchData = HrUserInOuttime::where('date', $date)->where('user_id', $user_id);

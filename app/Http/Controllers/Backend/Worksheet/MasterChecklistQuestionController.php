@@ -7,10 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\MasterChecklistQuestion;
 
 class MasterChecklistQuestionController extends Controller {
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Worksheet master checklist question listing api
-     */
+ 
 
     public function index(Request $request) {
         //try {
@@ -111,10 +108,7 @@ class MasterChecklistQuestionController extends Controller {
 //        }
     }
 
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Store worksheet checklist question
-     */
+   
 
     public function store(Request $request) {
         try {
@@ -140,10 +134,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Fetch master checklist question details
-     */
+
 
     public function show(Request $request, $id) {
         try {
@@ -161,11 +152,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Update master checklist question details
-     */
-
+  
     public function update(Request $request, $id) {
         try {
             $validator = $this->validateInput($request);
@@ -194,10 +181,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Fetch master activity listing with task
-     */
+  
 
     public function updatestatus(Request $request, $id) {
         try {
@@ -229,10 +213,7 @@ class MasterChecklistQuestionController extends Controller {
         }
     }
 
-    /
-     * Created on: July 26, 2018
-     * Purpose   : Validate worksheet master checklist question input
-     */
+   
 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [

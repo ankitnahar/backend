@@ -7,10 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Backend\WorksheetTraining;
 
 class TrainingController extends Controller {
-    /
-     * Created on: July 18, 2018
-     * Purpose   : Fetch worksheet training data
-     */
+ 
 
     public function index(Request $request) {
         try {
@@ -98,10 +95,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /
-     * Created on: July  18, 2018
-     * Purpose   : Store worksheet training data
-     */
+ 
 
     public function store(Request $request) {
         try {
@@ -122,10 +116,6 @@ class TrainingController extends Controller {
         }
     }
 
-    /
-     * Created on: July 18, 2018
-     * Purpose   : Show worksheet training data
-     */
 
     public function show(Request $request, $id) {
         try {
@@ -143,10 +133,6 @@ class TrainingController extends Controller {
         }
     }
 
-    /
-     * Created on: July 18, 2018
-     * Purpose   : Show worksheet training data
-     */
 
     public function update(Request $request, $id) {
         try {
@@ -176,10 +162,7 @@ class TrainingController extends Controller {
         }
     }
 
-    /
-     * Created on: April 20, 2018
-     * Purpose   : Validate user input
-     */
+  
 
     public static function validateInput($request) {
         $validator = app('validator')->make($request->all(), [

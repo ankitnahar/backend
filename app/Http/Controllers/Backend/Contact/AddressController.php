@@ -8,11 +8,7 @@ use App\Models\Backend\Address;
 use DB;
 
 class AddressController extends Controller {
-    /
-     * Created on: July 05, 2018
-     * Purpose   : Fetch entity address data
-     */
-
+   
     public function index(Request $request) {
        // try {
             //validate request parameters
