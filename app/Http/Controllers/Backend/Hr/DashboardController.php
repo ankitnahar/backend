@@ -11,10 +11,7 @@ use App\Models\Backend\PendingTimesheet;
 //use App\Models\User;
 
 class DashboardController extends Controller {
-    /
-     * Created on: April 24, 2018
-     * Purpose   : Fetch attendance summary data
-     */
+   
 
     public function index(Request $request) {
         //try {
