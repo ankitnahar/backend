@@ -52,24 +52,14 @@ class AuthController extends Controller {
     public function authenticate(Request $request) {
         // try {
         //validate user details
-        /* $validator = app('validator')->make($request->all(), [
-          'email' => 'required',
+         $validator = app('validator')->make($request->all(), [
+          'user_login_name' => 'required',
+          'password' => 'required',
           ], []);
 
           if ($validator->fails())
-          return createResponse(config('httpResponse.UNPROCESSED'), "Request parameter missing.", ['error' => $validator->errors()->first()]); */
-        $MiniToken = $request->input('token');
-        if ($request->has('token') && $MiniToken != '') {
-            $user_details = \App\Models\User::where("email", $request->input('email'))->where("is_active", "1")->first();
-            $pass = generateRandomString();
-            $password = password_hash($pass, PASSWORD_BCRYPT);
-            if (\App\Models\User::where("id", $user_details->id)->update(["password" => $password])) {
-
-                $request->request->add(['user_login_name' => $user_details->user_login_name]);
-                $request->request->add(['password' => $pass]);
-            }
-        }
-
+          return createResponse(config('httpResponse.UNPROCESSED'), "Request parameter missing.", ['error' => $validator->errors()->first()]); 
+      
         // Get username and password from the request
         $credentials = $request->only(['user_login_name', 'password']);
         // Validate details

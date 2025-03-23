@@ -28,6 +28,7 @@ class CheckPrivilege {
         $userid = app('auth')->guard()->id();
         $designation = getLoginUserHierarchy();
         // check for superadmin 
+        echo $designation->designation_id;exit;
        if ($designation->designation_id == config('constant.SUPERADMIN')) {
             return $next($request);
         }
